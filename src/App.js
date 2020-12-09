@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import OneButton from './OneButton';
+import ThreeButtons from './ThreeButtons';
 
 function App() {
+
+  let number = 10;
+  let textOperation = `Plus ${number}`;  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3>One button</h3>
+      <OneButton number={number} textOperation={textOperation}></OneButton>
+
+      <hr/>
+      <hr/>
+      <hr/>
+
+      <h3>Three buttons</h3>
+      <ThreeButtons></ThreeButtons>
     </div>
   );
 }
