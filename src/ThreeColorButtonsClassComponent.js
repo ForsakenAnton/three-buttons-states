@@ -4,7 +4,7 @@ import React from 'react';
 /*export*/ class Display extends React.Component {
 
     render() {
-        return <p style={{ backgroundColor: this.props.bgColor, color: this.props.color }}>Текст</p>
+        return <p style={{ backgroundColor: this.props.bgColor, color: this.props.color }}>Text: {this.props.bgColor}: {this.props.textColor}</p>
     }
 }
 

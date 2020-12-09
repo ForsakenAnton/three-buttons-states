@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 /*export*/ function Display(props) {
 
-    return <p style={{backgroundColor: props.bgColor, color: props.color}}>Текст</p>
+    return <p style={{ backgroundColor: props.bgColor, color: props.color }}>Text: {props.bgColor}:{props.color}</p>
 }
 
 
@@ -12,7 +12,7 @@ import React, {useState} from 'react';
         props.buttonClickAction(props.bgColor, props.color);
     }
 
-return <button onClick={clickHandler} style={{backgroundColor: props.bgColor, color: props.color}}>{props.bgColor}:{props.color}</button>
+    return <button onClick={clickHandler} style={{ backgroundColor: props.bgColor, color: props.color }}>{props.bgColor}:{props.color}</button>
 
 }
 
@@ -28,15 +28,15 @@ export default function ThreeColorButtonsFuncComponent() {
         setTextColor(newTextColor);
     }
 
-    return(
+    return (
         <>
             <SetColorButton buttonClickAction={changeColor} bgColor="green" color="red"></SetColorButton>
             <SetColorButton buttonClickAction={changeColor} bgColor="red" color="green"></SetColorButton>
-            <SetColorButton buttonClickAction={changeColor} bgColor="black" color="white"></SetColorButton>        
+            <SetColorButton buttonClickAction={changeColor} bgColor="black" color="white"></SetColorButton>
             <SetColorButton buttonClickAction={changeColor} bgColor="blue" color="white"></SetColorButton>
             <SetColorButton buttonClickAction={changeColor} bgColor="white" color="blue"></SetColorButton>
             <SetColorButton buttonClickAction={changeColor} bgColor="black" color="orange"></SetColorButton>
-            
+
             <hr></hr>
             <p>... buttons with default props</p>
 
@@ -45,7 +45,7 @@ export default function ThreeColorButtonsFuncComponent() {
 
             <SetColorButton buttonClickAction={changeColor} bgColor="black"></SetColorButton>
             <SetColorButton buttonClickAction={changeColor} color="black"></SetColorButton>
-            
+
             <SetColorButton buttonClickAction={changeColor} color="lightGreen"></SetColorButton>
             <SetColorButton buttonClickAction={changeColor} bgColor="steelBlue"></SetColorButton>
 
@@ -55,7 +55,7 @@ export default function ThreeColorButtonsFuncComponent() {
     )
 }
 
-SetColorButton.defaultProps={
-    bgColor:"lightGreen", color:"steelBlue"
+SetColorButton.defaultProps = {
+    bgColor: "lightGreen", color: "steelBlue"
 };
 // все, наиздевался :)
