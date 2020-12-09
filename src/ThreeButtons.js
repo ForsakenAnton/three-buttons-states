@@ -29,7 +29,7 @@ export function CounterButton(props) {
 export default function ThreeButtons(/*props*/) {
     const [value, setValue] = useState(0);
 
-    const changeValue = (newValue) => {
+    const changeValue = (newValue) => { // тут newValue === props.operationValue из CounterButton, потому что ниже buttonClickAction={changeValue} а выше props.buttonClickAction(props.operationValue);
         setValue(value + newValue); // !
     }
 
